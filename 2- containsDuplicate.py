@@ -40,13 +40,13 @@ class Solution3(object):
         """
         for i, n in enumerate(nums):
             for j, m in enumerate(nums):
-				if n == m:
-					continue
+                if n == m:
+                    continue
 				
-				if i == j:
-					return True
+                if i == j:
+                    return True
 		
-		return False
+        return False
 		
 		
 #Own solution with Neecode, but as per requirement - O(n) Time complexity 
@@ -77,7 +77,7 @@ class Solution5(object):
         :rtype: bool
         """
         uniqueSet = set(nums)
-        if len(uniqueSet) == len(nums)
-			return False
-		else:
-			return True
+        if len(uniqueSet) == len(nums):
+             return False
+        else:
+            return True
