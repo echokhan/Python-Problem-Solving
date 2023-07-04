@@ -41,6 +41,6 @@ Going back to the use of a data structure, this time, we avoid using a dictionar
 
 Lastly, we could either collect/append all elements of the list within a set and check for a second occurence, or simply compare length of the set of the list with the length of the list, which would help us determine a duplication of elements. Finding the length of any list is time complexity O(1) [List - Get Length](https://wiki.python.org/moin/TimeComplexity). However, we have another structure (set) using extra space, therefore O(n) as space complexity
 n: length of nums\
-:watch: Time Complexity: O(1)
+:watch: Time Complexity: O(1)\
 :black_circle: Space Complexity: O(n)
 ***********************************************************************************************
