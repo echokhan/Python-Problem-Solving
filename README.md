@@ -44,3 +44,18 @@ n: length of nums\
 :watch: Time Complexity: O(1)\
 :black_circle: Space Complexity: O(n)
 ***********************************************************************************************
+
+:star: **3- ValidAnagram**
+The overall approach of my first solution was in the right direction. Unfortunately, rather than just comparing the length of each string, I proceeded to add each string's letters to separate dictionaries and compared the keys. 
+Similarly, rather than just using a count method in the string, I iterated over the string and incremented until I found the frequency of each letter, which I used later to compare for each respective letter.
+
+A better form of my solution was just comparison of the length of strings and using a set find the unique elements and compare the frequency of each using [str.count()](https://python-reference.readthedocs.io/en/latest/docs/str/count.html#:~:text=str.%20count(sub%5B%2C%20start%5B%2C%20end%5D%5D)) method.
+
+Of course, a very elegant solution here is just sorting each string and comparing them. The time-complexity will then depend on the sorting algorithm that we use. The average case time complexity of Tim sort (the algo in sorted() function) is O(n log n).
+
+The first one has Time complexity of O(s), considering we have to iterate over entire set of any one of the strings. 
+s: length of set of string\
+n: length of string\
+:watch: Time Complexity: O(s)\
+:black_circle: Space Complexity: O(n)
+***********************************************************************************************
