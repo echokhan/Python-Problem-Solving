@@ -59,3 +59,11 @@ n: length of string\
 :watch: Time Complexity: O(s)\
 :black_circle: Space Complexity: O(n)
 ***********************************************************************************************
+
+:star: **4- Group Anagrams**
+The first approach was to derive from the previous problem of (ValidAnagrams)[https://github.com/echokhan/Python-Problem-Solving/blob/main/3-%20ValidAnagram.py]. However, using that along with my unoptimized code, the solution passed 111/118 test cases before a time limit error. I was going through the entire list, in a nested for loop comparing each string with the other, which might was extremely inefficient, on top of the approach to find anagrams by comparing frequency of each letter.
+
+A better form of my solution was just collecting each string in a list of keys, which were created using a sorted string. A big help was the use of (defaultdict)[https://docs.python.org/3/library/collections.html#collections.defaultdict:~:text=Using%20list%20as%20the%20default_factory%2C%20it%20is%20easy%20to%20group%20a%20sequence%20of%20key%2Dvalue%20pairs%20into%20a%20dictionary%20of%20lists%3A]. This default value, helped avoid adding additional checks. After all strings were added to values in the dictionary, we appending each as a list to create a list of lists. The sort, using tim sort had a time-compexity of nlogn, where n is the length. This would result in a time complexity of O(m*nlogn), where m is the total number of strings in the list.
+
+Another solution, which was apparently supposed to be faster, was very simlar to the above. The same collection of keys from the list of strings. However, rather than using a sorted function, and getting a tuple, we tried to create a list of frequency of each letter, by finding relative unicode for each letter. Of course, this list was converted later to tuple. The runtime of the above timesort solution was lesser. The time-complexity of this solution is O(m*n).
+***********************************************************************************************

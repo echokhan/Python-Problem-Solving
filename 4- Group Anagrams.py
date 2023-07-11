@@ -54,3 +54,24 @@ class Solution2(object):
         for i in strs_dict.values():
           final_list.append(i)
         return final_list
+  
+  #Neetcode solution. Was supposed to have a faster runtime. It is fast, but slower than above, timesort solution.
+  class Solution3(object):
+    def groupAnagrams(self, strs):
+          """
+          :type strs: List[str]
+          :rtype: List[List[str]]
+          """
+          strs_dict = defaultdict(list)
+          for i in strs:
+              unicode_list = [0] * 26
+              for str in i:
+                  unicode_list[ord(str) - ord('a')] +=1
+
+              str_key = tuple(unicode_list)
+              strs_dict[str_key].append(i)
+
+          final_list = []
+          for i in strs_dict.values():
+            final_list.append(i)
+          return final_list
