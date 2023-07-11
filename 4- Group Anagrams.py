@@ -1,3 +1,5 @@
+from collections import defaultdict
+
 def isAnagram(s, t):
   if len(set(s)) != len(set(t)):
     return False
@@ -35,3 +37,20 @@ class Solution1(object):
             strs_dict[s].append(s)
 
         return list(strs_dict.values())
+
+#A solution I found on leetcode. Intiailised a dictionary with default value type: list. Also, created keys from sorted elements.
+class Solution2(object):
+  def groupAnagrams(self, strs):
+        """
+        :type strs: List[str]
+        :rtype: List[List[str]]
+        """
+        strs_dict = defaultdict(list)
+        for i in strs:
+          str_key = tuple(sorted(i))
+          strs_dict[str_key].append(i)
+
+        final_list = []
+        for i in strs_dict.values():
+          final_list.append(i)
+        return final_list
