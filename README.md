@@ -67,3 +67,8 @@ A better form of my solution was just collecting each string in a list of keys, 
 
 Another solution, which was apparently supposed to be faster, was very simlar to the above. The same collection of keys from the list of strings. However, rather than using a sorted function, and getting a tuple, we tried to create a list of frequency of each letter, by finding relative unicode for each letter. Of course, this list was converted later to tuple. The runtime of the above timesort solution was lesser. The time-complexity of this solution is O(m*n).
 ***********************************************************************************************
+
+:star: **5- topKFrequent**
+Finding the frequency was a straightforward approach of finding the frequency of each element in the list (nums). After that, we have two lists, which we can zip together either using the function (zip())[https://docs.python.org/3/library/functions.html#zip] or creating a list of tuples based on similar indices.
+In my solution, I used a lamba function as key to sort the list tuples and then extract the first element from the tuple (nums element), while restricting till k elements.
+***********************************************************************************************
