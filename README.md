@@ -71,4 +71,9 @@ Another solution, which was apparently supposed to be faster, was very simlar to
 :star: **5- topKFrequent**
 Finding the frequency was a straightforward approach of finding the frequency of each element in the list (nums). After that, we have two lists, which we can zip together either using the function (zip())[https://docs.python.org/3/library/functions.html#zip] or creating a list of tuples based on similar indices.
 In my solution, I used a lamba function as key to sort the list tuples and then extract the first element from the tuple (nums element), while restricting till k elements.
+The second solution, was an interpretation of neetcode. There were two main things to be done.
+The first was finding frequency of each element in the list (nums) using a dictionary. The second was creation of count_array which was to be a list of sublists/buckets each of which was to be populated by the elements of list(nums), at positions/indices which were the same as the frequency of the element values in nums.
+Then we iterate over the count_array in a descending order, ignoring the empty buckets and collecting values in count_array, returning the topK elements depending on the value of k.
+
+Another solution, as per my interpretation was bucketing 
 ***********************************************************************************************
