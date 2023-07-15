@@ -75,3 +75,14 @@ The second solution, was an interpretation of neetcode. There were two main thin
 The first was finding frequency of each element in the list (nums) using a dictionary. The second was creation of count_array which was to be a list of sublists/buckets each of which was to be populated by the elements of list(nums), at positions/indices which were the same as the frequency of the element values in nums.
 Then we iterate over the count_array in a descending order, ignoring the empty buckets and collecting values in count_array, returning the topK elements depending on the value of k.
 ***********************************************************************************************
+
+:star: **5- productExceptSelf**
+The first approach was to simply find product of all elements, skipping the element on position i.
+This was unoptimized. O(n2)
+
+Then we tried to find product of elements, slicing the lists as per the position i. Again, it was unoptimized. O(n2)
+
+Then, I saw how everyone on leetcode and neetcode was using two different iterations to populate lists (left_pass (prefix)
+and right_pass(suffix)), finding cumulative products and multiplying both for each position i. This was O(3n) = O(n),
+which was a little more optimized. I understood why we were doing this, however, frankly, it was a tricky one for me.
+***********************************************************************************************
