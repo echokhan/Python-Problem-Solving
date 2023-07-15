@@ -76,7 +76,7 @@ The first was finding frequency of each element in the list (nums) using a dicti
 Then we iterate over the count_array in a descending order, ignoring the empty buckets and collecting values in count_array, returning the topK elements depending on the value of k.
 ***********************************************************************************************
 
-:star: **5- productExceptSelf**
+:star: **6- productExceptSelf**
 The first approach was to simply find product of all elements, skipping the element on position i.
 This was unoptimized. O(n2)
 
