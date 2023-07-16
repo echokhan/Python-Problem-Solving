@@ -90,5 +90,5 @@ Given `nums = [a, b, c, d]`
 Then answer or the resulting list would be `[b*c*d, a*c*d, a*b*d, a*b*c]`
 The left_pass, after left to right iteration gives `[1, a, a*b, a*b*c]`
 The right_pass, after right to left iteration gives `[b*c*d, c*d, d, 1]`
-Produt of left_pass[i] and right_pass[i] would give us the above result. So cumulative product does make sense in this way.
+Product of left_pass[i] and right_pass[i] would give us the above result. So cumulative product does make sense in this way.
 ***********************************************************************************************
