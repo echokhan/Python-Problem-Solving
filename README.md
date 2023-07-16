@@ -85,4 +85,10 @@ Then we tried to find product of elements, slicing the lists as per the position
 Then, I saw how everyone on leetcode and neetcode was using two different iterations to populate lists (left_pass (prefix)
 and right_pass(suffix)), finding cumulative products and multiplying both for each position i. This was O(3n) = O(n),
 which was a little more optimized. I understood why we were doing this, however, frankly, it was a tricky one for me.
+I think of it like this. 
+Given `nums = [a, b, c, d]`
+Then answer or the resulting list would be `[b*c*d, a*c*d, a*b*d, a*b*c]`
+The left_pass, after left to right iteration gives `[1, a, a*b, a*b*c]`
+The right_pass, after right to left iteration gives `[b*c*d, c*d, d, 1]`
+Produt of left_pass[i] and right_pass[i] would give us the above result. So cumulative product does make sense in this way.
 ***********************************************************************************************
